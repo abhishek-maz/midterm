@@ -1,10 +1,10 @@
 steps:
   # Build the Docker image 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-central1-docker.pkg.dev/quixotic-prism-412316/mary-100953904/python-flask:${COMMIT_SHA}', '.']
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/winter-2024/midterm/python-flask:${COMMIT_SHA}', '.']
   # Push the Docker image to the artifact registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-central1-docker.pkg.dev/quixotic-prism-412316/mary-100953904/python-flask:${COMMIT_SHA}']
+    args: ['push', 'us-central1-docker.pkg.dev/winter-2024/midterm/python-flask:${COMMIT_SHA}']
  
  
 options:
@@ -13,4 +13,4 @@ options:
   defaultLogsBucketBehavior: 'REGIONAL_USER_OWNED_BUCKET'
 images:
 # Store images in Google Artifact Registry
-  - us-central1-docker.pkg.dev/quixotic-prism-412316/mary-100953904/python-flask:${COMMIT_SHA}
+  - us-central1-docker.pkg.dev/winter-2024/midterm/python-flask:${COMMIT_SHA}
